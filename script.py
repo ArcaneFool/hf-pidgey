@@ -13,7 +13,7 @@ import py_gg
 
 
 botprefix = ('<', '£', '=', '"')
-TOKEN = "NDIwODgyNDc2NzQ4MjQyOTQ0.DZFyFw.81RzMdHOt3XBCLLa5MLZ1n2WTV0"
+TOKEN = ""
 client = Bot(command_prefix=botprefix)
 
 
@@ -60,7 +60,7 @@ async def avatar(ctx, member: discord.Member = None):
 @client.command(pass_context=True)
 @commands.cooldown(3,5,BucketType.server)
 async def summoner(ctx, region, *, nam):
-    cass.set_riot_api_key("RGAPI-c475dafe-804f-48f7-9c11-7eccba8b90da")  # This overrides the value set in your configuration/settings.
+    cass.set_riot_api_key("ba8b90da")  # This overrides the value set in your configuration/settings.
     try:
         cass.set_default_region(region)
         summoner = cass.get_summoner(name=str(nam))
@@ -368,7 +368,7 @@ async def build(ctx,role,*,id):
         id=str.title(id)
         namefortitle=id
         name=id.replace(" ","")
-        py_gg.init("265960d76589c37fd56831905f6c53a8")
+        py_gg.init("")
         ses= requests.Session()
         txts=ses.get("http://ddragon.leagueoflegends.com/cdn/8.9.1/data/en_US/champion.json")
         full_ids=txts.text
